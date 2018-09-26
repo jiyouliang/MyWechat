@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pageBackground"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/itemDividerHeight">
+
+
+        <com.jiyouliang.mywechat.view.SettingItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:sivBackground="@drawable/icon_discovery_circle"
+            app:sivDividerEnable="false"
+            app:sivTitle="朋友圈" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/itemDividerHeight"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <com.jiyouliang.mywechat.view.SettingItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sivBackground="@drawable/icon_discovery_scan"
+                app:sivTitle="扫一扫" />
+
+
+            <com.jiyouliang.mywechat.view.SettingItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sivBackground="@drawable/icon_discovery_shake"
+                app:sivTitle="摇一摇" />
+
+
+        </LinearLayout>
+
+        <com.jiyouliang.mywechat.view.SettingItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/itemDividerHeight"
+            app:sivBackground="@drawable/icon_discovery_search"
+            app:sivTitle="搜一搜" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/itemDividerHeight"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <com.jiyouliang.mywechat.view.SettingItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sivBackground="@drawable/icon_discovery_nearby"
+                app:sivTitle="附件的人" />
+
+            <com.jiyouliang.mywechat.view.SettingItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sivBackground="@drawable/icon_discovery_bottle"
+                app:sivDividerEnable="false"
+                app:sivTitle="漂流瓶" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/itemDividerHeight"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <com.jiyouliang.mywechat.view.SettingItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sivBackground="@drawable/icon_discovery_cart"
+                app:sivTitle="购物" />
+
+            <com.jiyouliang.mywechat.view.SettingItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sivBackground="@drawable/icon_discovery_game"
+                app:sivDividerEnable="false"
+                app:sivTitle="游戏" />
+
+
+        </LinearLayout>
+
+        <com.jiyouliang.mywechat.view.SettingItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/itemDividerHeight"
+            app:sivBackground="@drawable/icon_setting"
+            app:sivDividerEnable="false"
+            app:sivTitle="小程序" />
+
+    </LinearLayout>
+
+
+</ScrollView>

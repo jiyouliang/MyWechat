@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="微信(18)"
+            android:textColor="@color/colorText" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?selectableItemBackground"
+            android:padding="15dp"
+            android:src="@drawable/add" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/common_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/ll_wechat"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                style="@style/BtmNavIconStyle"
+                android:background="@drawable/weichat_selected" />
+
+            <TextView
+                style="@style/TextSelected"
+                android:text="微信" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_contact"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                style="@style/BtmNavIconStyle"
+                android:background="@drawable/contact_normal" />
+
+            <TextView
+                style="@style/TextNormal"
+                android:text="通讯录" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_discovery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                style="@style/BtmNavIconStyle"
+                android:background="@drawable/dis_normal" />
+
+            <TextView
+                style="@style/TextNormal"
+                android:text="发现" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                style="@style/BtmNavIconStyle"
+                android:background="@drawable/mine_normal" />
+
+            <TextView
+                style="@style/TextNormal"
+                android:text="我" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
