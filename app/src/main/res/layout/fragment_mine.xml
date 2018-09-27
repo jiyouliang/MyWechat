@@ -52,7 +52,7 @@
             <com.jiyouliang.mywechat.view.SettingItemView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:sivBackground="@drawable/icon_card"
+                app:sivBackground="@drawable/emoji"
                 app:sivDividerEnable="false"
                 app:sivTitle="表情" />
 
