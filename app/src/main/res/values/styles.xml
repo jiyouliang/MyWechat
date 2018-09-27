@@ -35,5 +35,19 @@
         <item name="android:background">@drawable/common_line</item>
     </style>
 
+    <style name="textTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="textDesc">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textNormal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 
 </resources>

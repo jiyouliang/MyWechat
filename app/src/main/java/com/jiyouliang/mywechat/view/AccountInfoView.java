@@ -11,17 +11,23 @@ import com.jiyouliang.mywechat.R;
  * Created by JiYouLiang on 2018/09/25.
  */
 
-public class AccountInfoView extends RelativeLayout {
+public class AccountInfoView extends RelativeLayout implements View.OnClickListener {
     public AccountInfoView(Context context) {
         this(context, null);
     }
 
     public AccountInfoView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        View.inflate(context, R.layout.account_info_view_layout, this);
+        View view = View.inflate(context, R.layout.account_info_view_layout, this);
+        view.setOnClickListener(this);
     }
 
     public AccountInfoView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

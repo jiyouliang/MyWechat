@@ -16,14 +16,16 @@ import com.jiyouliang.mywechat.R;
  * Created by JiYouLiang on 2018/09/25.
  */
 
-public class SettingItemView extends LinearLayout {
+public class SettingItemView extends LinearLayout implements View.OnClickListener {
     public SettingItemView(Context context) {
         this(context, null);
     }
 
     public SettingItemView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        View.inflate(context, R.layout.setting_item_view_layout, this);
+        View view = View.inflate(context, R.layout.setting_item_view_layout, this);
+        view.setOnClickListener(this);
+
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SettingItemView);
         Drawable background = a.getDrawable(R.styleable.SettingItemView_sivBackground);
@@ -43,5 +45,10 @@ public class SettingItemView extends LinearLayout {
 
     public SettingItemView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
