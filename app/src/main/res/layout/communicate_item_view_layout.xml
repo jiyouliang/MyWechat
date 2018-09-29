@@ -10,13 +10,13 @@
 
     <FrameLayout
         android:id="@+id/fl"
-        android:layout_width="62dp"
-        android:layout_height="62dp">
+        android:layout_width="48dp"
+        android:layout_height="48dp">
 
         <ImageView
             android:id="@+id/iv_logo"
-            android:layout_width="58dp"
-            android:layout_height="58dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:layout_gravity="center"
             android:background="@drawable/friend2" />
 
@@ -39,13 +39,15 @@
 
         <TextView
             android:id="@+id/tv_title"
+            android:textSize="16sp"
             style="@style/textTitle"
             android:text="昵称" />
 
         <TextView
             android:id="@+id/tv_desc"
             style="@style/textDesc"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
             android:text="消息" />
 
 

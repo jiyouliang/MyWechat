@@ -43,17 +43,34 @@
         android:layout_marginTop="6dp">
 
         <LinearLayout
-            android:layout_width="0dp"
             android:id="@+id/ll_wechat"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
 
-            <ImageView
-                style="@style/BtmNavIconStyle"
-                android:background="@drawable/weichat_selected" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_wechat"
+                    style="@style/BtmNavIconStyle"
+                    android:background="@drawable/weichat_selected" />
+
+                <TextView
+                    android:layout_width="14dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="14dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/shape_red_dot"
+                    android:gravity="center"
+                    android:text="18"
+                    android:textSize="8sp" />
+
+            </FrameLayout>
 
             <TextView
                 style="@style/TextSelected"

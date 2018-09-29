@@ -111,7 +111,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     private void showWechatTab() {
-        ImageView ivWechat = (ImageView) mLlWechat.getChildAt(0);
+        ImageView ivWechat = (ImageView) mLlWechat.findViewById(R.id.iv_wechat);
         TextView tvWechat = (TextView) mLlWechat.getChildAt(1);
         tvWechat.setTextColor(getResources().getColor(R.color.textSelected));
         ivWechat.setBackgroundResource(R.drawable.weichat_selected);
@@ -122,7 +122,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      */
     private void resetTab() {
         ((TextView) mLlWechat.getChildAt(1)).setTextColor(getResources().getColor(R.color.textNormal));
-        ((ImageView) mLlWechat.getChildAt(0)).setBackgroundResource(R.drawable.weichat_normal);
+        mLlWechat.findViewById(R.id.iv_wechat).setBackgroundResource(R.drawable.weichat_normal);
 
         ((TextView) mLlContact.getChildAt(1)).setTextColor(getResources().getColor(R.color.textNormal));
         ((ImageView) mLlContact.getChildAt(0)).setBackgroundResource(R.drawable.contact_normal);
