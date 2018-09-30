@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="SettingItemView">
-        <attr name="sivDividerEnable" format="boolean"/>
-        <attr name="sivTitle" format="string|reference"/>
-        <attr name="sivBackground" format="color|reference"/>
+        <attr name="sivDividerEnable" format="boolean" />
+        <attr name="sivTitle" format="string|reference" />
+        <attr name="sivBackground" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ContactView">
+        <attr name="cvBackground" format="color|reference" />
+        <attr name="cvName" format="string|reference" />
+        <attr name="cvDividerVisiable" format="boolean" />
     </declare-styleable>
 </resources>

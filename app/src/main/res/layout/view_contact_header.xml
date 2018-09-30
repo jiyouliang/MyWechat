@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.jiyouliang.mywechat.view.ContactView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cvBackground="@drawable/icon_new_friend"
+        app:cvName="新的朋友" />
+
+    <com.jiyouliang.mywechat.view.ContactView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cvBackground="@drawable/icon_group_chat"
+        app:cvName="群聊" />
+
+    <com.jiyouliang.mywechat.view.ContactView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cvBackground="@drawable/icon_contact_tag"
+        app:cvName="标签" />
+
+    <com.jiyouliang.mywechat.view.ContactView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cvBackground="@drawable/icon_pub_id"
+        app:cvDividerVisiable="false"
+        app:cvName="公众号" />
+
+</LinearLayout>

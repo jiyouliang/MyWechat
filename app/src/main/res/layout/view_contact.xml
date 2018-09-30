@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@drawable/common_item_selector"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@drawable/friend2" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/textTitle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/iv_logo"
+        android:text="联系人" />
+
+    <View
+        android:id="@+id/v_divider"
+        style="@style/DividerStyle"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
