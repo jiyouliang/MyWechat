@@ -1,11 +1,16 @@
 package com.jiyouliang.mywechat;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.MenuBuilder;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,10 +21,11 @@ import com.jiyouliang.mywechat.fragment.DiscoveryFragment;
 import com.jiyouliang.mywechat.fragment.MineFragment;
 import com.jiyouliang.mywechat.fragment.WechatFragment;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private LinearLayout mLlWechat;
     private LinearLayout mLlContact;
@@ -28,6 +34,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private ViewPager mViewPager;
     private WechatAdapter mAdapter;
     private List<Fragment> mFragmentList = new ArrayList<Fragment>();
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +53,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mLlDiscovery = (LinearLayout) findViewById(R.id.ll_discovery);
         mLlMine = (LinearLayout) findViewById(R.id.ll_mine);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mToolbar = (Toolbar)findViewById(R.id.toolbar);
 
-
+//        mToolbar.setNavigationIcon(R.drawable.add);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);//避免toolbar默认标题占位
         setListener();
     }
 
@@ -177,4 +187,28 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             return mFragmentList.size();
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @SuppressLint("RestrictedApi")
+    @Override
+    //解决menu icon不显示问题
+    protected boolean onPrepareOptionsPanel(View view, Menu menu) {
+        if (menu != null) {
+            if (menu.getClass() == MenuBuilder.class) {
+                try {
+                    Method m = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
+                    m.setAccessible(true);
+                    m.invoke(menu, true);
+                } catch (Exception e) {
+//                    e.print(getClass().getSimpleName() + "onMenuOpened...unable to set icons for overflow menu" + e);
+                }
+            }
+        }
+        return super.onPrepareOptionsPanel(view, menu);
+    };
 }
