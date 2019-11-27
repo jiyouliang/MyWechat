@@ -61,7 +61,7 @@
                 <ImageView
                     android:id="@+id/iv_wechat"
                     style="@style/BtmNavIconStyle"
-                    android:background="@drawable/weichat_selected" />
+                    android:background="@drawable/ic_wechat_selector" />
 
                 <TextView
                     android:layout_width="14dp"
@@ -76,6 +76,7 @@
             </FrameLayout>
 
             <TextView
+                android:textColor="@color/tab_text_color"
                 style="@style/TextSelected"
                 android:text="微信" />
 
@@ -93,9 +94,10 @@
 
             <ImageView
                 style="@style/BtmNavIconStyle"
-                android:background="@drawable/contact_normal" />
+                android:background="@drawable/ic_contact_selector" />
 
             <TextView
+                android:textColor="@color/tab_text_color"
                 style="@style/TextNormal"
                 android:text="通讯录" />
 
@@ -113,10 +115,11 @@
 
             <ImageView
                 style="@style/BtmNavIconStyle"
-                android:background="@drawable/dis_normal" />
+                android:background="@drawable/ic_discovery_selector" />
 
             <TextView
                 style="@style/TextNormal"
+                android:textColor="@color/tab_text_color"
                 android:text="发现" />
 
         </LinearLayout>
@@ -132,10 +135,11 @@
 
             <ImageView
                 style="@style/BtmNavIconStyle"
-                android:background="@drawable/mine_normal" />
+                android:background="@drawable/ic_mine_selector" />
 
             <TextView
                 style="@style/TextNormal"
+                android:textColor="@color/tab_text_color"
                 android:text="我" />
 
         </LinearLayout>

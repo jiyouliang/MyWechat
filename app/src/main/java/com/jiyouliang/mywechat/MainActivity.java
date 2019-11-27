@@ -35,6 +35,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private WechatAdapter mAdapter;
     private List<Fragment> mFragmentList = new ArrayList<Fragment>();
     private Toolbar mToolbar;
+    private ImageView mIvWechat;
+    private TextView mTvWechat;
+    private TextView mTvContact;
+    private ImageView mIvContact;
+    private TextView mTvDiscovery;
+    private ImageView mIvDiscovery;
+    private TextView mTvMine;
+    private ImageView mIvMine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +62,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mLlMine = (LinearLayout) findViewById(R.id.ll_mine);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mToolbar = (Toolbar)findViewById(R.id.toolbar);
+
+        mIvWechat = (ImageView) mLlWechat.findViewById(R.id.iv_wechat);
+        mTvWechat = (TextView) mLlWechat.getChildAt(1);
+        mTvWechat.setActivated(true);
+        mIvWechat.setActivated(true);
+
+        mIvContact = (ImageView) mLlContact.getChildAt(0);
+        mTvContact = (TextView) mLlContact.getChildAt(1);
+        mIvDiscovery = (ImageView) mLlDiscovery.getChildAt(0);
+        mTvDiscovery = (TextView) mLlDiscovery.getChildAt(1);
+        mIvMine = (ImageView) mLlMine.getChildAt(0);
+        mTvMine = (TextView) mLlMine.getChildAt(1);
 
 //        mToolbar.setNavigationIcon(R.drawable.add);
         setSupportActionBar(mToolbar);
@@ -105,41 +125,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void showMineTab() {
-        ((TextView) mLlMine.getChildAt(1)).setTextColor(getResources().getColor(R.color.textSelected));
-        ((ImageView) mLlMine.getChildAt(0)).setBackgroundResource(R.drawable.mine_selected);
-    }
-
-    private void showDiscoveryTab() {
-        ((TextView) mLlDiscovery.getChildAt(1)).setTextColor(getResources().getColor(R.color.textSelected));
-        ((ImageView) mLlDiscovery.getChildAt(0)).setBackgroundResource(R.drawable.dis_selected);
+    private void showWechatTab() {
+        mTvWechat.setActivated(true);
+        mIvWechat.setActivated(true);
     }
 
     private void showContactTab() {
-        ((TextView) mLlContact.getChildAt(1)).setTextColor(getResources().getColor(R.color.textSelected));
-        ((ImageView) mLlContact.getChildAt(0)).setBackgroundResource(R.drawable.contact_selected);
+        mIvContact.setActivated(true);
+        mTvContact.setActivated(true);
     }
 
-    private void showWechatTab() {
-        ImageView ivWechat = (ImageView) mLlWechat.findViewById(R.id.iv_wechat);
-        TextView tvWechat = (TextView) mLlWechat.getChildAt(1);
-        tvWechat.setTextColor(getResources().getColor(R.color.textSelected));
-        ivWechat.setBackgroundResource(R.drawable.weichat_selected);
+    private void showDiscoveryTab() {
+        mIvDiscovery.setActivated(true);
+        mTvDiscovery.setActivated(true);
+    }
+
+    private void showMineTab() {
+        mTvMine.setActivated(true);
+        mIvMine.setActivated(true);
     }
 
     /**
      * 重置底部导航样式
      */
     private void resetTab() {
-        ((TextView) mLlWechat.getChildAt(1)).setTextColor(getResources().getColor(R.color.textNormal));
-        mLlWechat.findViewById(R.id.iv_wechat).setBackgroundResource(R.drawable.weichat_normal);
-
-        ((TextView) mLlContact.getChildAt(1)).setTextColor(getResources().getColor(R.color.textNormal));
-        ((ImageView) mLlContact.getChildAt(0)).setBackgroundResource(R.drawable.contact_normal);
-        ((TextView) mLlDiscovery.getChildAt(1)).setTextColor(getResources().getColor(R.color.textNormal));
-        ((ImageView) mLlDiscovery.getChildAt(0)).setBackgroundResource(R.drawable.dis_normal);
-        ((TextView) mLlMine.getChildAt(1)).setTextColor(getResources().getColor(R.color.textNormal));
-        ((ImageView) mLlMine.getChildAt(0)).setBackgroundResource(R.drawable.mine_normal);
+        mTvWechat.setActivated(false);
+        mIvWechat.setActivated(false);
+        mTvContact.setActivated(false);
+        mIvContact.setActivated(false);
+        mTvDiscovery.setActivated(false);
+        mIvDiscovery.setActivated(false);
+        mIvMine.setActivated(false);
+        mTvMine.setActivated(false);
     }
 
     @Override
